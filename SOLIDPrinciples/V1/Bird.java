@@ -4,7 +4,7 @@ package SOLIDPrinciples.V1;
  * v1 of this bird class eliminate the srp violation in the previous version
  * as the playSount mentod changes only when new bird is added but not when the bird particular sound is changed.
  */
-public class Bird {
+public class Bird  {
 
     String name;
     String color;
