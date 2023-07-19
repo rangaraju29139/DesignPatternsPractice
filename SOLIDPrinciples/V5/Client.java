@@ -9,16 +9,16 @@ import java.util.List;
 public class Client  {
     public static void main(String[] args) {
 
-        Flyator ff = new FastFlyator();
-        Flyator sf = new SlowFlyator();
-
-
-        Crow c = new FastFlyator();
-        Sparrow s = new SlowFlyator();
-        Pigeon p = new FastFlyator();
-
-
-        List<Flyable> list = new ArrayList<>();
+//        Flyator ff = new FastFlyator();
+//        Flyator sf = new SlowFlyator();
+//
+//
+//        Crow c = new FastFlyator();
+//        Sparrow s = new SlowFlyator();
+//        Pigeon p = new FastFlyator();
+//
+//
+//        List<Flyable> list = new ArrayList<>();
 
 
 
