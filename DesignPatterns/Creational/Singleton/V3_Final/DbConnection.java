@@ -20,7 +20,7 @@ public class DbConnection {
         this.password = password;
     }
 
-    public static DbConnection getConnection(String url, String username, String password){
+    public static synchronized DbConnection getConnection(String url, String username, String password){
         if(connection == null){
             connection = new DbConnection(url, username, password);
         }
