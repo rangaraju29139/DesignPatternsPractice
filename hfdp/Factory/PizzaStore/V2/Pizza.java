@@ -1,21 +1,12 @@
-package hfdp.Factory.PizzaStore.V1;
+package hfdp.Factory.PizzaStore.V2;
 
-public class Pizza {
-    String name="";
-    String description="sample description";
+public abstract class Pizza {
 
 
-    public void prepare(){
-        System.out.println("preparatioon of pizza");
-    }
-    public void bake(){
-        System.out.println("baking the pizza");
-    }
-    public void cut(){
-        System.out.println("cutting the pizza");
-    }
-    public void box(){
-        System.out.println("packing the pizza into a box");
-    }
+
+    public abstract void prepare();
+    public abstract void bake();
+    public abstract void cut();
+    public abstract void box();
 
 }

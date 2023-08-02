@@ -1,11 +1,20 @@
-package hfdp.Factory.PizzaStore.V1;
+package hfdp.Factory.PizzaStore.V2;
 
 public class OrderPizza {
-    public static void main(String[] args) {
-           Pizza pizza = new Pizza();
-           pizza.prepare();;
-           pizza.bake();
-           pizza.cut();
-           pizza.box();
-    }
+
+           Pizza pizza;
+          public  OrderPizza(String name){
+               if(name == "cheese"){
+                   pizza = new CheesePizza();
+               }else if(name == "Greek"){
+                   pizza = new GreekPizza();
+               }
+               pizza.prepare();
+               pizza.bake();
+               pizza.cut();
+               pizza.box();
+
+           }
+
+
 }
