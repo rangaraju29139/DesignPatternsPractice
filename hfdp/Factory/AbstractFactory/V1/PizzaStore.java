@@ -1,18 +1,14 @@
-package hfdp.Factory.SimpleFactory.V3;
+package hfdp.Factory.AbstractFactory.V1;
 
-public class PizzaStore {
+public abstract class PizzaStore {
 
-           PizzaFactory factory;
-           public PizzaStore(PizzaFactory factory) {
-               this.factory = factory;
-           }
           public void  purchasePizza(String name){
-              this.factory = factory;
+
                Pizza pizza;
 
               System.out.println("====== got an order for " + name+ " pizza =====");
 
-              pizza = factory.createPizza(name);
+              pizza = createPizza(name);
 
                pizza.prepare();
                pizza.bake();
@@ -20,6 +16,7 @@ public class PizzaStore {
                pizza.box();
 
            }
+           public abstract Pizza createPizza(String name);
 
 
 }

@@ -1,12 +1,14 @@
-package hfdp.Factory.SimpleFactory.V3;
+package hfdp.Factory.AbstractFactory.V1;
 
 public class Client {
     public static void main(String[] args) {
-        PizzaFactory factory = new PizzaFactory();
-        PizzaStore store = new PizzaStore(factory);
+
+        PizzaStore store = new NyStylePizzaStore();
 
         store.purchasePizza("cheese");
         store.purchasePizza("Greek");
+
+
 
     }
 
