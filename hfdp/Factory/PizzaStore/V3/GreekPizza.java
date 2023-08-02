@@ -1,6 +1,6 @@
-package hfdp.Factory.PizzaStore.V2;
+package hfdp.Factory.PizzaStore.V3;
 
-public class GreekPizza extends Pizza{
+public class GreekPizza extends Pizza {
 
     public void prepare(){
         System.out.println("preparation of Greek pizza");
