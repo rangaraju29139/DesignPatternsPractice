@@ -1,4 +1,4 @@
-package hfdp.Factory.PizzaStore.V2;
+package hfdp.Factory.SimpleFactory.V2;
 
 public class Client {
     public static void main(String[] args) {

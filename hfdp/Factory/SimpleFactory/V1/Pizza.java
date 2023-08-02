@@ -1,4 +1,4 @@
-package hfdp.Factory.PizzaStore.V1;
+package hfdp.Factory.SimpleFactory.V1;
 
 public class Pizza {
     String name="";

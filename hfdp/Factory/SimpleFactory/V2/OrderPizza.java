@@ -1,4 +1,4 @@
-package hfdp.Factory.PizzaStore.V2;
+package hfdp.Factory.SimpleFactory.V2;
 
 public class OrderPizza {
 
