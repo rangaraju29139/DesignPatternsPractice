@@ -1,4 +1,4 @@
-package hfdp.Factory.AbstractFactory.V1;
+package hfdp.Factory.FactoryMethod.V1;
 
 public class GreekPizza extends Pizza {
 
