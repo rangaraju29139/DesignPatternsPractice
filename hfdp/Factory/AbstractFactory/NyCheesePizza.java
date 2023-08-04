@@ -1,12 +1,22 @@
-package hfdp.Factory.FactoryMethod.V1;
+package hfdp.Factory.AbstractFactory;
 
 
+public class NyCheesePizza  extends Pizza {
 
-public class NyCheesePizza  extends Pizza{
+
+    PizzaIngredientFactory pizzaIngredientFactory;
+
+    public NyCheesePizza(PizzaIngredientFactory pizzaIngredientFactory){
+        this.pizzaIngredientFactory = pizzaIngredientFactory;
+    }
 
     public void prepare(){
-        System.out.println("preparatioon of ny cheese pizza");
+        System.out.println("preparation of ny cheese pizza");
+        dough =  pizzaIngredientFactory.createDough();
+        sauce = pizzaIngredientFactory.createSauce();
     }
+
+
     public void bake(){
         System.out.println("baking the cheese ny pizza");
     }

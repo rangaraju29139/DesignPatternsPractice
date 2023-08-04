@@ -1,4 +1,4 @@
-package hfdp.Factory.FactoryMethod.V1;
+package hfdp.Factory.AbstractFactory;
 
 public class Client {
     public static void main(String[] args) {

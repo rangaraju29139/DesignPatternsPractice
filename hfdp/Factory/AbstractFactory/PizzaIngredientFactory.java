@@ -1,2 +1,8 @@
-package hfdp.Factory.AbstractFactory;public class PizzaIngredientFactory {
+package hfdp.Factory.AbstractFactory;
+
+public interface PizzaIngredientFactory {
+    public String createDough();
+    public String createSauce();
+
+
 }
