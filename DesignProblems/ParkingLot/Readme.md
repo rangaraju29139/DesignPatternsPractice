@@ -15,4 +15,4 @@
   - [ ] A floor in Parking lot has many parking slots
   - [ ] parkinglot can support different types of vehicles
 ## step 2:  Imaging user flows
-  - [ ] 
+  - [ ] #1
