@@ -37,6 +37,124 @@
 ## step 3 : Class diagram 
 - [ ] check nouns
 - [ ] visualize  (sketch and user flow)
+#### Class descriptions
+- ParkingLot
+  - DataMembers
+    - id 
+    - name 
+    - address
+    - List<Gate>
+  - Methods
+
+
+- Gate
+  - DataMembers
+    - id
+    - GateType
+    - Operator
+  - Methods
+
+
+- GateType(Enum for Gate)
+  - EXIT
+  - ENTRY
+
+
+- ParkingFloor
+  - DataMembers
+    - id
+    - level
+    - List<ParkingSlot>
+  - Methods
+
+
+- ParkingSlot
+  - DataMembers
+    - id
+    - number 
+    - status
+    - vehicleType
+  - Methods
+
+
+- ParkingSlotStatus(Enum for parking Slot)
+  - OCCUPIED
+  - AVAILABLE
+
+- Vehicle
+  - DataMembers
+    - id
+    - RegistrationNumber
+    - VehicleType
+  - Methods
+
+
+
+
+
+
+- VehicleType(Enum for vehicle)
+  - TWO_WHEELER
+  - SMALL
+  - MEDIUM
+  - 
+
+
+- Token
+  - DataMembers
+    - id
+    - entryTime
+    - Gate
+    - Operator
+    - Vehicle
+    - ParkingSlot
+  - Methods
+
+
+- Bill
+  - DataMembers
+    - id
+    - exitTime
+    - Gate
+    - Operator
+    - Fare
+    - Token
+  - Methods
+
+
+- Payment
+  - DataMembers
+    - id
+    - Bill
+    - paymentMode
+    - paymentStatus
+  - Methods
+
+- PaymentMode (enum for payment)
+  - CASH
+  - ONLINE
+
+- PaymentStatus(enum for payment)
+  - SUCCESS
+  - FAILED
+  - INPROGRESS
+
+- Operator
+  - id
+  - username
+
+
+### Strategies
+- interface SlotAllocationStrategy()
+  - allotSlot(Gate,VehicleType)
+- interface CaliculateFareStategy()
+  - caliculateFare(entryTime,exitTime,vehicleType)
+
+## step 3: Schema Design 
+1. [ ] Make a table for all classes and enumbs
+2. [ ] make columns for all primitive datamembers
+3. [ ] Identify Carinality & make relations
+4. 
 
 ## step 4 : Coding
 - [ ] creating models 
