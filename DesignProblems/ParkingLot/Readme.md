@@ -15,6 +15,7 @@
   - [ ] A floor in Parking lot has many parking slots
   - [ ] parkinglot can support different types of vehicles
 ## step 2:  Imaging user flows
+<<<<<<< HEAD
   - [ ]  get a ticket / token at the entry/gate (alllocation of the slot).
   - [ ]  A bill is generated at the exit gate according to duration, Vehicle type,Timing.
   - [ ] payment has to be made either online or cash.
@@ -159,3 +160,4 @@
 ## step 4 : Coding
 - [ ] creating models 
 - [ ] requirement by requirement
+
