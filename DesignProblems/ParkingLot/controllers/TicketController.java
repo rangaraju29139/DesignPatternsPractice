@@ -7,6 +7,7 @@ import DesignProblems.ParkingLot.dtos.GenerateTicketRequestDto;
 import DesignProblems.ParkingLot.dtos.GenerateTicketResponseDto;
 import DesignProblems.ParkingLot.Services.TicketService;
 import DesignProblems.ParkingLot.dtos.ResponseStatus;
+import DesignProblems.ParkingLot.exceptions.NoParkingSlotAvailableException;
 
 public class TicketController {
      private  TicketService ticketService;
@@ -23,16 +24,21 @@ public class TicketController {
 
     }
 
-    GenerateTicketResponseDto generateTicket(GenerateTicketRequestDto requestDto){
-            try{
-                Ticket ticket = ticketService.generateTicket(requestDto);
-                GenerateTicketResponseDto responseDto = new GenerateTicketResponseDto();
-                responseDto.setTicket(ticket);
-                responseDto.setResponseStatus(ResponseStatus.SUCCESS);
+   public  GenerateTicketResponseDto generateTicket(GenerateTicketRequestDto requestDto) {
+        GenerateTicketResponseDto responseDto = null;
+        try {
+            Ticket ticket = ticketService.generateTicket(
+                    requestDto.getGateId(),requestDto.getVehicleRegistrationNumber(),requestDto.getVehicleType() );
+            responseDto = new GenerateTicketResponseDto();
+            responseDto.setTicket(ticket);
+            responseDto.setResponseStatus(ResponseStatus.SUCCESS);
 
-            }catch(Exception e){
+        } catch (NoParkingSlotAvailableException e) {
+            responseDto.setResponseStatus(ResponseStatus.FAILURE);
+            responseDto.setMessage(e.getMessage());
 
-            }
+        }
+        return responseDto;
     }
 }
 

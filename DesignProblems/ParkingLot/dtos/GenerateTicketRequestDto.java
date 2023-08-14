@@ -1,11 +1,14 @@
 package DesignProblems.ParkingLot.dtos;
 
 import DesignProblems.ParkingLot.Models.enums.VehicleType;
+import DesignProblems.ParkingLot.Services.VehicleService;
 
 public class GenerateTicketRequestDto {
     private Long gateId;
-    private  String VehicleType;
-    private DesignProblems.ParkingLot.Models.enums.VehicleType vehicleType;
+
+    private String vehicleRegistrationNumber;
+    private VehicleType vehicleType;
+//    private DesignProblems.ParkingLot.Models.enums.VehicleType vehicleType;
 
     public Long getGateId() {
         return gateId;
@@ -15,15 +18,22 @@ public class GenerateTicketRequestDto {
         this.gateId = gateId;
     }
 
-    public String getVehicleType() {
-        return VehicleType;
+    public VehicleType getVehicleType() {
+        return vehicleType;
     }
 
-    public void setVehicleType(DesignProblems.ParkingLot.Models.enums.VehicleType vehicleType) {
+
+
+
+    public void setVehicleType(VehicleType  vehicleType) {
         this.vehicleType = vehicleType;
     }
 
-    public void setVehicleType(String vehicleType) {
-        VehicleType = vehicleType;
+    public String getVehicleRegistrationNumber() {
+        return vehicleRegistrationNumber;
+    }
+
+    public void setVehicleRegistrationNumber(String vehicleRegistrationNumber) {
+        this.vehicleRegistrationNumber = vehicleRegistrationNumber;
     }
 }
